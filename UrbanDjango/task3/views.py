@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from django.shortcuts import render
 
 def platform(request):
     context = {
         'title': 'Игровая платформа',
         'menu': {'platform': '/',
                  'games': '/games/',
-                 'craft': '/craft/'}
+                 'cart': '/cart/'}
     }
     return render(request, 'templates/third_task/platform.html', context)
 
@@ -21,7 +20,8 @@ def games(request):
         'menu': {'platform': '/',
                  'games': '/games/',
                  'cart': '/cart/'},
-        'games': games}
+        'games': games
+    }
     return render(request, 'templates/third_task/games.html', context)
 
 def cart(request):
@@ -29,7 +29,6 @@ def cart(request):
         'title': 'Корзина',
         'menu': {'platform': '/',
                  'games': '/games/',
-                 'cart': '/cart/'},
-        'message': 'Ваша корзина сейчас пуста.'
+                 'cart': '/cart/'}
     }
     return render(request, 'templates/third_task/cart.html', context)
