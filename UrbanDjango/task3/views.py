@@ -7,7 +7,7 @@ def platform(request):
                  'games': '/games/',
                  'cart': '/cart/'}
     }
-    return render(request, 'templates/third_task/platform.html', context)
+    return render(request, 'third_task/platform.html', context)
 
 def games(request):
     games = {
@@ -22,7 +22,7 @@ def games(request):
                  'cart': '/cart/'},
         'games': games
     }
-    return render(request, 'templates/third_task/games.html', context)
+    return render(request, 'third_task/games.html', context)
 
 def cart(request):
     context = {
@@ -31,4 +31,4 @@ def cart(request):
                  'games': '/games/',
                  'cart': '/cart/'}
     }
-    return render(request, 'templates/third_task/cart.html', context)
+    return render(request, 'third_task/cart.html', context)

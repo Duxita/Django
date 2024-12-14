@@ -23,3 +23,13 @@ urlpatterns = [
     path('class/', ClassView.as_view(), name='class_template'),
     path('func/', func, name='func_template'),
 ]
+
+from django.contrib import admin
+from django.urls import path
+from task3.views import platform, games, cart
+
+urlpatterns = [
+    path('', platform, name='platform'),
+    path('games/', games, name='games'),
+    path('cart/', cart, name='cart'),
+]
