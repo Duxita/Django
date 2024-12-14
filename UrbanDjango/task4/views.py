@@ -5,9 +5,11 @@ def platform(request):
         'title': 'Игровая платформа',
         'menu': {'platform': '/',
                  'games': '/games/',
-                 'cart': '/cart/'}
+                 'cart': '/cart/'},
+        'content': ''
+
     }
-    return render(request, 'third_task/platform.html', context)
+    return render(request, 'fourth_task/platform.html', context)
 
 def games(request):
     games = {
@@ -20,15 +22,17 @@ def games(request):
         'menu': {'platform': '/',
                  'games': '/games/',
                  'cart': '/cart/'},
-        'games': games
+        'content': games
+
     }
-    return render(request, 'third_task/games.html', context)
+    return render(request, 'fourth_task/games.html', context)
 
 def cart(request):
     context = {
         'title': 'Корзина',
         'menu': {'platform': '/',
                  'games': '/games/',
-                 'cart': '/cart/'}
+                 'cart': '/cart/'},
+        'content': 'Ваша корзина сейчас пуста'
     }
-    return render(request, 'third_task/cart.html', context)
+    return render(request, 'fourth_task/cart.html', context)
