@@ -4,15 +4,13 @@
 
 {% block content %}
 <nav>
-    {% block menu %}
     <p><h3><a href="{{ menu.platform }}">Главная</a></h3></p>
     <p><h3><a href="{{ menu.games }}">Магазин</a></h3></p>
     <h3><a href="{{ menu.cart }}">Корзина</a></h3>
-    {% endblock %}
 </nav>
 <ul>
     {% for key, game in content.items %}
-    <li>{{ key }}: {{ game }} <a href="{% url 'cart' %}">Купить</a></li>
+    <li><H3>{{ key }}: {{ game }} <a href="{% url 'cart' %}">Купить</a></H3></li>
     {% endfor %}
 </ul>
 {% endblock %}
